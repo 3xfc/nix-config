@@ -216,16 +216,16 @@
         "nmd": "nmd"
       },
       "locked": {
-        "lastModified": 1771723117,
-        "narHash": "sha256-YdXQOy9lUpxDS1IEejzEWpMLHGBZTD01JJidr2r/1fU=",
+        "lastModified": 1784576577,
+        "narHash": "sha256-IBnnHmzPQ6bhZHxweZIKkyu3PSGBVM81bnShIsGNK1g=",
         "owner": "petm5",
         "repo": "nix-on-droid",
-        "rev": "dc7aee594ca29198da71a7025dec69b248693e4c",
+        "rev": "43547f7f30df4d013b88e4c495d7aaa8e93e0484",
         "type": "github"
       },
       "original": {
         "owner": "petm5",
-        "ref": "test-native-build",
+        "ref": "proot-optimization",
         "repo": "nix-on-droid",
         "type": "github"
       }
