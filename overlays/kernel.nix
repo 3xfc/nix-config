@@ -7,4 +7,5 @@ self: super: {
       surface-platform-profile = kself.callPackage ../pkgs/surface-platform-profile { };
     });
   };
+  vd55g-firmware = super.callPackage ../pkgs/vd55g-firmware { };
 }
