@@ -1,0 +1,27 @@
+diff --git a/drivers/media/pci/intel/ipu6/ipu6-isys.c b/drivers/media/pci/intel/ipu6/ipu6-isys.c
+index c9cdeb705..81eaa1d13 100644
+--- a/drivers/media/pci/intel/ipu6/ipu6-isys.c
++++ b/drivers/media/pci/intel/ipu6/ipu6-isys.c
+@@ -98,7 +98,7 @@ enum ltr_did_type {
+ 	LTR_TYPE_MAX
+ };
+ 
+-#define ISYS_PM_QOS_VALUE	300
++#define ISYS_PM_QOS_VALUE	50
+ 
+ static int isys_isr_one(struct ipu6_bus_device *adev);
+ 
+diff --git a/drivers/media/pci/intel/ipu6/ipu6-isys.h b/drivers/media/pci/intel/ipu6/ipu6-isys.h
+index 7fb8cb820..ba616d1a9 100644
+--- a/drivers/media/pci/intel/ipu6/ipu6-isys.h
++++ b/drivers/media/pci/intel/ipu6/ipu6-isys.h
+@@ -39,7 +39,8 @@ struct ipu6_bus_device;
+ #define IPU6_ISYS_SIZE_PROXY_SEND_QUEUE 5
+ #define IPU6_ISYS_NUM_RECV_QUEUE 1
+ 
+-#define IPU6_ISYS_MIN_WIDTH		2U
++/* Work around stream failing with low bytes per line */
++#define IPU6_ISYS_MIN_WIDTH		392U
+ #define IPU6_ISYS_MIN_HEIGHT		1U
+ #define IPU6_ISYS_MAX_WIDTH		4672U
+ #define IPU6_ISYS_MAX_HEIGHT		3416U

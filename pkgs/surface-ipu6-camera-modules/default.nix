@@ -10,6 +10,7 @@ moduleTargets = [
   "drivers/media/i2c/ov5693"
   "drivers/media/i2c/ov13858"
   "drivers/media/i2c/dw9719"
+  "drivers/media/i2c/vd55g"
 ];
 
 modulesOrder = writeText "modules.order" (
@@ -24,9 +25,12 @@ in stdenv.mkDerivation {
 
   patches = [
     ./surface-cameras.patch
+    ./vd55g0-support.patch
+    ./surface-ipu-fix.patch
   ];
 
   makeFlags = [
+    "CONFIG_VIDEO_VD55G=m"
     "-C ${kernel.dev}/lib/modules/${kernel.modDirVersion}/build"
     "MO=$(buildRoot)"
     "M=$(modulesSrc)"
