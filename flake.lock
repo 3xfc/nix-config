@@ -216,16 +216,16 @@
         "nmd": "nmd"
       },
       "locked": {
-        "lastModified": 1784576577,
-        "narHash": "sha256-IBnnHmzPQ6bhZHxweZIKkyu3PSGBVM81bnShIsGNK1g=",
+        "lastModified": 1785180253,
+        "narHash": "sha256-Wp7KR6iIeYzfznNbSfUApXUPT6yPp+GvlKPq+tgY90s=",
         "owner": "petm5",
         "repo": "nix-on-droid",
-        "rev": "43547f7f30df4d013b88e4c495d7aaa8e93e0484",
+        "rev": "f4e289de99735ce2de18b6956084d636db6330e2",
         "type": "github"
       },
       "original": {
         "owner": "petm5",
-        "ref": "proot-optimization",
+        "ref": "idiomatic",
         "repo": "nix-on-droid",
         "type": "github"
       }
@@ -417,11 +417,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1780801201,
-        "narHash": "sha256-RIKDfkWEDXEV0/wz5Y6swnXS/0PPZSCjKu4okf/NHfA=",
+        "lastModified": 1785712464,
+        "narHash": "sha256-Ab40df/1U3WGdjZZqhO0soj97igT/LnwpdffqFJ1q/I=",
         "owner": "petm5",
         "repo": "surface-audio",
-        "rev": "c1e23bf6e369663e481a564d535a49f2947804d4",
+        "rev": "15d065d1d1e7f3b90e0e45c8122e027a8c4b6056",
         "type": "github"
       },
       "original": {
