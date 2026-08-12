@@ -30,6 +30,7 @@
     dig
     zip
     unzip
+    gnutar
     btop
     gh
     direnv
