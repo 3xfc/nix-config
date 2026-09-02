@@ -2,8 +2,6 @@
 
   boot.initrd.systemd.enable = true;
 
-  documentation.enable = false;
-
   systemd.network.enable = lib.mkDefault true;
 
   networking.nameservers = [
