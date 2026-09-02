@@ -35,6 +35,8 @@
   services.gpg-agent.enable = true;
   services.gpg-agent.pinentry.package = pkgs.pinentry-tty;
 
+  programs.aerc.enable = true;
+
   programs.nushell.environmentVariables = config.home.sessionVariables;
 
 }
