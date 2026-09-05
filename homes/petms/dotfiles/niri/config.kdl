@@ -150,7 +150,7 @@ layout {
     // preset-window-heights { }
 
     // You can change the default width of the new windows.
-    default-column-width { proportion 0.5; }
+    default-column-width { proportion 0.66667; }
     // If you leave the brackets empty, the windows themselves will decide their initial width.
     // default-column-width {}
 
@@ -333,11 +333,24 @@ window-rule {
     // block-out-from "screencast"
 }
 
+window-rule {
+    match app-id="foot"
+    match app-id="footclient"
+    match app-id=r#"firefox$"#
+    open-maximized true
+}
+
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
 window-rule {
     geometry-corner-radius 4
     clip-to-geometry true
+}
+
+gestures {
+    hot-corners {
+        off
+    }
 }
 
 binds {
