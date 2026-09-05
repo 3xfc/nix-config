@@ -1,6 +1,8 @@
-{ lib, ... }:
+{ lib, darkTheme, ... }:
 let
-  themeFile = ./tokyonight_moon.toml;
+  themeFile = if darkTheme
+    then ./tokyonight_moon.toml
+    else ./catppuccin-latte.toml;
 
   colors = (builtins.fromTOML (builtins.readFile themeFile)).colors;
 

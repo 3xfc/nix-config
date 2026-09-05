@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ lib, pkgs, ... }: {
 
   programs.nushell = {
     enable = true;
@@ -17,7 +17,7 @@
       svelte-language-server
     ];
     settings = {
-      theme = "tokyonight_moon";
+      theme = lib.mkDefault "tokyonight_moon";
       editor.soft-wrap = {
         enable = true;
         max-wrap = 25;

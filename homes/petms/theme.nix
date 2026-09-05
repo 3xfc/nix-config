@@ -1,5 +1,6 @@
+{ darkTheme }:
 { pkgs, ... }: let
-  colors = pkgs.callPackage ../../modules/colors {};
+  colors = pkgs.callPackage ../../modules/colors { inherit darkTheme; };
 in {
 
   home.pointerCursor = {
@@ -39,10 +40,10 @@ in {
   gtk = {
     enable = true;
 
-    iconTheme.name = "Papirus-Dark";
+    iconTheme.name = "Papirus";
 
-    gtk3.theme.name = "Adwaita-dark";
-    gtk2.theme.name = "Adwaita-dark";
+    gtk3.theme.name = if darkTheme then "Adwaita-dark" else "Adwaita";
+    gtk2.theme.name = if darkTheme then "Adwaita-dark" else "Adwaita";
     gtk2.theme.package = pkgs.gnome-themes-extra;
 
     font = {
@@ -60,7 +61,7 @@ in {
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
-      color-scheme = "prefer-dark";
+      color-scheme = if darkTheme then "prefer-dark" else "prefer-light";
       accent-color = "teal";
     };
     "org/gnome/desktop/a11y/applications" = {
@@ -71,9 +72,7 @@ in {
     };
   };
 
-  qt.platformTheme.name = "gtk";
-  qt.style.name = "adwaita-dark";
-  qt.style.package = pkgs.adwaita-qt;
+  qt.platformTheme.name = "gtk3";
 
   programs.foot.settings = {
     main = {
@@ -99,10 +98,13 @@ in {
 
   programs.fuzzel.settings = {
     main = {
-      icon-theme = "Papirus-Dark";
+      icon-theme = if darkTheme then "Papirus-Dark" else "Papirus";
       font = "DejaVu Sans Mono";
+      use-bold = true;
     };
     colors = colors.fuzzel;
   };
+
+  programs.helix.settings.theme = if darkTheme then "tokyonight_moon" else "cyan_light";
 
 }
