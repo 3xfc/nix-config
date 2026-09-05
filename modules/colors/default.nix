@@ -45,6 +45,20 @@ let
     bright6 = bright.cyan;
     bright7 = bright.white;
   });
+
+  formatFuzzel = colors: lib.mapAttrs (_: hex: "${builtins.substring 1 7 hex}ff") (with colors; rec {
+      background = primary.background;
+      text = primary.foreground;
+      prompt = normal.white;
+      placeholder = bright.black;
+      input = text;
+      match = normal.yellow;
+      selection = text;
+      selection-text = background;
+      selection-match = bright.yellow;
+      counter = normal.white;
+      border = normal.black;
+  });
 in {
 
   alacritty = colors;
@@ -52,5 +66,7 @@ in {
   termux = formatTermux colors;
 
   foot = formatFoot colors;
+
+  fuzzel = formatFuzzel colors;
 
 }
