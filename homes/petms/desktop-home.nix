@@ -2,7 +2,7 @@
 
   imports = [
     ./home.nix
-    (import ./theme.nix { darkTheme = true; })
+    (import ./theme.nix { darkTheme = false; })
     ./niri.nix
     ./firefox.nix
     flake-inputs.nix-flatpak.homeManagerModules.nix-flatpak

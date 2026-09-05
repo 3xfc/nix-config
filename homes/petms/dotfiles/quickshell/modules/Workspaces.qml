@@ -21,7 +21,7 @@ RowLayout {
                 height: parent.height
                 radius: parent.width
                 scale: 0.65 + 0.1 * active
-                color: active && "#cceeeeee" || urgent && "#aaffc553" || "#66dddddd"
+                color: active && "#9ca0b0" || urgent && "#df8e1d" || "#ccd0da"
             }
 
             MouseArea {

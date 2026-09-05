@@ -12,9 +12,9 @@ PanelWindow {
     
     exclusionMode: ExclusionMode.Auto
 
-    property color colBg: "#1e1e2e"
-    property color colFg: "#cdd6f4"
-    property color colBorder: "#313244"
+    property color colBg: "#eff1f5"
+    property color colFg: "#4c4f69"
+    property color colBorder: "#ccd0da"
     property int iconSize: 16
     property int fontSize: 14
 
@@ -59,19 +59,19 @@ PanelWindow {
                     spacing: 10
 
                     Audio {
-                        color: "#a6e3a1"
+                        color: root.colFg
                     }
 
                     Mpris {
-                        color: "#f5c2e7"
+                        color: root.colFg
                     }
                         
                     Network {
-                        color: "#89b4fa"
+                        color: root.colFg
                     }
 
                     Battery {
-                        color: "#f9e2af"
+                        color: root.colFg
                     }
 
                     SystemClock {
